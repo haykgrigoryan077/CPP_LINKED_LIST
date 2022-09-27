@@ -11,7 +11,7 @@ public:
 
     LinkedListNode(const LinkedListNode &node) : data(node.data), next(node.next) {}
 
-    explicit LinkedListNode(const T &data) : data(data), next(nullptr) {}
+    LinkedListNode(const T &data) : data(data), next(nullptr) {}
 
     void print() {
         std::cout << this->data << " -> ";
