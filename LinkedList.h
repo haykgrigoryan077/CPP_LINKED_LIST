@@ -87,45 +87,13 @@ void LinkedList<T>::empty() {
 }
 
 template<class T>
-void LinkedList<T>::remove(const T &data) {
-    LinkedListNode<T> *current = head;
-    while (current->data != data) {
-
-    }
-}
-//
-//template<class T>
-//int LinkedList<T>::find_min_element() {
-//    LinkedListNode<T> *min_element = head;
-//    LinkedListNode<T> *current = head;
-//    while (current != NULL) {
-//        if (current->data < min_element->data) {
-//            min_element = *current->data;
-//        }
-//        current=current->next;
-//    }
-//    return min_element;
-//}
-
-template<class T>
 int LinkedList<T>::find_min_element() {
     {
         LinkedListNode<T> *current = head;
-        // Declare a min variable and initialize
-        // it with INT_MAX value.
-        // INT_MAX is integer type and its value
-        // is 32767 or greater.
         int min = INT_MAX;
-
-        // Check loop while head not equal to NULL
         while (current != NULL) {
-
-            // If min is greater than head->data then
-            // assign value of head->data to min
-            // otherwise node point to next node.
             if (min > current->data)
                 min = current->data;
-
             current = current->next;
         }
         return min;
